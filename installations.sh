@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano bpytop lsd gdu git -y
+sudo apt update && sudo apt install nano bpytop lsd gdu git lsof -y
 
 if [ $? == 0 ]
 then
