@@ -1,7 +1,7 @@
 # ubuntu_files
 
 ## Components
-This directory contains configuration files, scripts and bin files required to configure a new ubuntu machine after installations
+This directory contains configuration files, scripts and bin files required to configure a new ubuntu machine after installation
 
 ## Technologies
 * Scripts written in Bash 5.2.15(1)
