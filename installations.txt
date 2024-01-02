@@ -1,0 +1,106 @@
+#Installing neovim 0.9.0
+
+Download nvim-linux64.tar.gz
+https://github.com/neovim/neovim/releases
+
+Move downloaded file to /usr/bin. 
+sudo cd /usr/bin
+OR
+For OrbStack
+sudo cp /mnt/mac/Users/arnoldsmac/Downloads/nvim-linux64.tar.gz /usr/bin/
+
+Extract: 
+sudo tar xzvf nvim-linux64.tar.gz.
+
+create a symbolic link whiles still in /usr/bin
+sudo ln -s ./nvim-linux64/bin/nvim ./nvim
+
+Run ./nvim-linux64/bin/nvim
+
+
+
+
+
+#Install vimplug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+       
+       
+then nvim, type
+:PlugInstall
+
+
+
+#Install MesloGL Nerd Fonts
+https://github.com/romkatv/powerlevel10k-media
+
+navigate to
+cd /usr/share/fonts
+
+Unzip it
+unzip xxxxxx.zip
+
+cache it
+fc-cache
+
+fc-list to list fonts
+
+done
+
+
+
+
+
+#install OHMYZSH and powerlevel10k
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+Install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+
+Install auto-suggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+install syntax-highighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+
+
+
+
+
+
+#Install bpytop
+https://github.com/aristocratos/bpytop
+sudo apt install bpytop
+
+#Install gdu
+add-apt-repository ppa:daniel-milde/gdu
+apt-get update
+apt-get install gdu
+
+#Install fzf
+Sudo apt install fzf
+
+#Install lsd
+On Ubuntu lunar
+Sudo apt install lsd
+
+On lower versions
+Sudo Snap install lsd
+
+If nap is not installed on ur system, install it using
+Sudo apt install snapd 
+
+
+Increase history size indefinitely
+HIST_STAMPS="dd.mm.yyyy"
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+export EXTENDED_HISTORY
+
+
+Warping sub shell
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash"}}\x9c'
+
+
