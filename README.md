@@ -16,4 +16,4 @@ This directory contains configuration files, scripts and bin files required to c
 | `init.vim` | Configuration file for neovim
 | `installations.sh` | Script for installing various programs and adjusting configurations on Ubuntu
 | `installations.txt` | Text for containing instructions for installing various programs on Ubuntu
-| [`nvim-linux64.tat.gz`](https://github.com/neovim/neovim/releases) | Neovim version 0.9.6 bin file
+| [`nvim-linux64.tat.gz`](https://github.com/neovim/neovim/releases) | Neovim version 0.9.4 bin file
