@@ -28,7 +28,7 @@ if [ -d "$HOME/.config" ]
 then
 	cp -R /mnt/mac/Users/arnoldsmac/Desktop/Ubuntu_files/nvim/ $HOME/.config/
 else
-	mkdir $HOME/.config  && cp /mnt/mac/Users/arnoldsmac/Desktop/Ubuntu_files/nvim/ $HOME/.config/
+	mkdir $HOME/.config  && cp -R /mnt/mac/Users/arnoldsmac/Desktop/Ubuntu_files/nvim/ $HOME/.config/
 fi
 
 if [ $? == 0 ]
