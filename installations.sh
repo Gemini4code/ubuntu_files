@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano bpytop lsd gdu git nodejs -y
+sudo apt update && sudo apt install nano bpytop lsd gdu git nodejs entr unzip -y
 
 if [ $? == 0 ]
 then
-	echo "Nano, Bpytop, Lsd, Gdu, Git and Nodejs successfully installed..."
+	echo "Nano, Bpytop, Lsd, Gdu, Git, Entr, Unzip and Nodejs successfully installed..."
 else
 	echo "installation encountered an error. Please try again!"
 fi
