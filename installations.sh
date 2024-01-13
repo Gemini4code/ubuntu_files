@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano bpytop lsd gdu git nodejs entr unzip -y
+sudo apt update && sudo apt install nano bpytop lsd gdu git nodejs entr unzip npm -y
 
 if [ $? == 0 ]
 then
@@ -33,7 +33,7 @@ fi
 
 if [ $? == 0 ]
 then
-  echo "Nano, Bpytop, Lsd, Gdu, Git, Entr, Unzip and Nodejs successfully installed"
+  echo "nano, bpytop, lsd, gdu, git, entr, unzip, nodejs and npm successfully installed"
   echo "Hurray!!! Subshell successfully warpified"
 	echo "Neovim successfully installed" 
   echo "lazy.nvim with all essential plugins including LSP's successfully installed and configured..."
