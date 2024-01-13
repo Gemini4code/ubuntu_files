@@ -33,7 +33,10 @@ fi
 
 if [ $? == 0 ]
 then
-	echo "Neovim successfully installed and lazy.nvim with plugins successfully configured..."
+  echo "Nano, Bpytop, Lsd, Gdu, Git, Entr, Unzip and Nodejs successfully installed"
+  echo "Hurray!!! Subshell successfully warpified"
+	echo "Neovim successfully installed" 
+  echo "lazy.nvim with all essential plugins including LSP's successfully installed and configured..."
 else
 	echo "Error occured when installing Neovim and lazy.nvim"
 fi
