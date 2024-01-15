@@ -42,7 +42,7 @@ then
   echo "nanorc copied to home directory. You can now configure nano editor..."
   echo "date and time now included in history"
 	echo "Neovim successfully installed" 
-  echo "Nvchad with all default configurations installed..."
+  echo "Nvchad with all default configurations including lazy.nvim, numerous plugins and LSPs installed..."
 else
 	echo "Error occured when installing Neovim and lazy.nvim"
 fi
