@@ -14,7 +14,8 @@ fi
 echo "printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash"}}\x9c'" >> ~/.bashrc
 
 #Include date and time to bash history
-export HISTTIMEFORMAT="[%F %T] "
+echo "export HISTTIMEFORMAT='[%F %T] '" >> ~/.bashrc
+echo "alias ls='lsd" >> ~/.bashrc
 
 source .bashrc
 
@@ -39,6 +40,7 @@ then
   echo "nano, bpytop, lsd, gdu, git, entr, unzip, nodejs and npm successfully installed"
   echo "subshell successfully warpified"
   echo "date and time now included in history"
+  echo "lsd alias added to bashrc"
 	echo "Neovim successfully installed" 
   echo "lazy.nvim with all essential plugins including LSP's successfully installed and configured..."
 else
