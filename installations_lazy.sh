@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano bpytop lsd gdu git nodejs entr unzip npm -y
+sudo apt update && sudo apt install nano bpytop lsd gdu git nodejs entr unzip npm ripgrep -y
 
 if [ $? == 0 ]
 then
-	echo "Nano, Bpytop, Lsd, Gdu, Git, Entr, Unzip and Nodejs successfully installed..."
+	echo "nano, bpytop, lsd, gdu, git, entr, unzip, ripgrep, npm, and nodejs successfully installed..."
 else
 	echo "installation encountered an error. Please try again!"
 fi
@@ -15,7 +15,12 @@ echo "printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash"}}
 
 #Include date and time to bash history
 echo "export HISTTIMEFORMAT='[%F %T] '" >> ~/.bashrc
-echo "alias ls='lsd" >> ~/.bashrc
+echo "alias ls='lsd'" >> ~/.bashrc
+echo "alias stop='sudo halt -p'" >> ~/.bashrc
+echo "alias ga='git add .'" >> ~/.bashrc
+echo "alias gc='git commit -m'" >> ~/.bashrc
+echo "alias gp='git push'" >> ~/.bashrc
+
 
 source .bashrc
 
@@ -30,17 +35,17 @@ sudo cp /mnt/mac/Users/arnoldsmac/Desktop/Ubuntu_files/nvim-linux64.tar.gz /usr/
 
 if [ -d "$HOME/.config" ]
 then
-	cp -R /mnt/mac/Users/arnoldsmac/Desktop/Ubuntu_files/nvim/ $HOME/.config/
+	cp -R $HOME/ubuntu_files/nvim $HOME/.config/
 else
-	mkdir $HOME/.config  && cp -R /mnt/mac/Users/arnoldsmac/Desktop/Ubuntu_files/nvim/ $HOME/.config/
+	mkdir $HOME/.config && cp -R $HOME/ubuntu_files/nvim $HOME/.config/
 fi
 
 if [ $? == 0 ]
 then
-  echo "nano, bpytop, lsd, gdu, git, entr, unzip, nodejs and npm successfully installed"
+  echo "nano, bpytop, lsd, gdu, git, entr, unzip, nodejs, ripgrep, and npm successfully installed"
   echo "subshell successfully warpified"
   echo "date and time now included in history"
-  echo "lsd alias added to bashrc"
+  echo "lsd, stop, and git aliases added to .bashrc"
 	echo "Neovim successfully installed" 
   echo "lazy.nvim with all essential plugins including LSP's successfully installed and configured..."
 else
