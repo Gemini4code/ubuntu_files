@@ -20,6 +20,7 @@ echo "alias stop='sudo halt -p'" >> ~/.bashrc
 echo "alias ga='git add .'" >> ~/.bashrc
 echo "alias gc='git commit -m'" >> ~/.bashrc
 echo "alias gp='git push'" >> ~/.bashrc
+echo "alias gs='git status'" >> ~/.bashrc
 
 
 source .bashrc
