@@ -32,7 +32,7 @@ cp /usr/share/doc/nano/examples/sample.nanorc $HOME/.nanorc
 echo "nanorc copied to home directory. You can now configure nano editor..."
 
 #Install nvim and copy its config file to $HOME/.config/nvim/
-sudo cp /mnt/mac/Users/arnoldsmac/Desktop/Ubuntu_files/nvim-linux64.tar.gz /usr/bin && cd /usr/bin && sudo tar xzvf nvim-linux64.tar.gz && sudo rm nvim-linux64.tar.gz && sudo ln -s ./nvim-linux64/bin/nvim ./nvim
+sudo cp ubuntu_files/nvim-linux64.tar.gz /usr/bin && cd /usr/bin && sudo tar xzvf nvim-linux64.tar.gz && sudo rm nvim-linux64.tar.gz && sudo ln -s ./nvim-linux64/bin/nvim ./nvim
 
 if [ -d "$HOME/.config" ]
 then
