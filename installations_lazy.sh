@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano bpytop lsd gdu git nodejs entr unzip npm ripgrep -y
+sudo apt update && sudo apt install nano bpytop lsd gdu nodejs entr unzip npm ripgrep -y
 
 if [ $? == 0 ]
 then
@@ -43,7 +43,7 @@ fi
 
 if [ $? == 0 ]
 then
-  echo "nano, bpytop, lsd, gdu, git, entr, unzip, nodejs, ripgrep, and npm successfully installed"
+  echo "nano, bpytop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"
   echo "subshell successfully warpified"
   echo "date and time now included in history"
   echo "lsd, stop, and git aliases added to .bashrc"
