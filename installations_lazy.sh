@@ -1,11 +1,12 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano fzf bpytop htop lsd gdu nodejs entr unzip npm ripgrep -y
+sudo apt update && sudo apt install nano fzf bat bpytop htop lsd gdu nodejs entr unzip npm ripgrep -y
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [ $? == 0 ]
 then
-	echo "nano, bpytop, lsd, gdu, git, entr, unzip, ripgrep, npm, and nodejs successfully installed..."
+	echo "nano, fzf, bat, bpytop, lsd, gdu, git, entr, unzip, ripgrep, npm, and nodejs successfully installed..."
 else
 	echo "installation encountered an error. Please try again!"
 fi
@@ -43,7 +44,8 @@ fi
 
 if [ $? == 0 ]
 then
-  echo "nano, fzf, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"
+  echo "nano, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"
+  echo "tmux sessionX with all its dependencies including tmux plugin manager, fzf, and bat installed"
   echo "subshell successfully warpified"
   echo "date and time now included in history"
   echo "lsd, stop, and git aliases added to .bashrc"

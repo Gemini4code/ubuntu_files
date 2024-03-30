@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano fzf bpytop htop lsd gdu nodejs entr unzip npm ripgrep -y
+sudo apt update && sudo apt install nano bpytop htop lsd gdu nodejs entr unzip npm ripgrep -y
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [ $? == 0 ]
 then
@@ -43,7 +44,8 @@ fi
 
 if [ $? == 0 ]
 then
-  echo "nano, fzf, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"
+  echo "nano, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"
+  echo "tmux sessionX with all its dependencies including tmux plugin manager, fzf, and bat installed"
   echo "subshell successfully warpified"
   echo "nanorc copied to home directory. You can now configure nano editor..."
   echo "date and time now included in history"
