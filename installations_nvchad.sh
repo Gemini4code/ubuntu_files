@@ -34,12 +34,12 @@ cp /usr/share/doc/nano/examples/sample.nanorc $HOME/.nanorc
 #Install nvim and copy its config file to $HOME/.config/nvim/
 sudo cp ubuntu_files/nvim-linux64.tar.gz /usr/bin && cd /usr/bin && sudo tar xzvf nvim-linux64.tar.gz && sudo rm nvim-linux64.tar.gz && sudo ln -s ./nvim-linux64/bin/nvim ./nvim
 
-# if [ -d "$HOME/.config" ]
-# then
-#   git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
-# else
-# 	mkdir $HOME/.config && git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
-# fi
+if [ -d "$HOME/.config" ]
+then
+  git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+else
+	mkdir $HOME/.config && git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+fi
 
 
 if [ $? == 0 ]
@@ -51,7 +51,7 @@ then
   echo "date and time now included in history"
   echo "lsd, stop, and git aliases added to .bashrc"
 	echo "Neovim successfully installed" 
-# echo "Nvchad with all default configurations including lazy.nvim, numerous plugins and LSPs installed..."
+  echo "Nvchad with all default configurations including lazy.nvim, numerous plugins and LSPs installed..."
 else
 	echo "Error occured when installing Neovim and lazy.nvim"
 fi
