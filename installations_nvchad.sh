@@ -38,7 +38,7 @@ if [ -d "$HOME/.config" ]
 then
   git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
 else
-	mkdir $HOME/.config && git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+	mkdir $HOME/.config && git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
 fi
 
 
