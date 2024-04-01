@@ -42,6 +42,10 @@ else
 	mkdir $HOME/.config && cp -R $HOME/ubuntu_files/nvim $HOME/.config/
 fi
 
+mkdir ~/.config/tmux/
+cp ubuntu_files/tmux.con ~/.tmux.conf
+cp ubuntu_files/tmux.keys.conf ~/.config/tmux/tmux.keys.conf
+
 if [ $? == 0 ]
 then
   echo "nano, tmux, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"

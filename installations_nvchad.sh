@@ -41,6 +41,9 @@ else
 	mkdir $HOME/.config && git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
 fi
 
+mkdir ~/.config/tmux/
+cp ubuntu_files/tmux.con ~/.tmux.conf
+cp ubuntu_files/tmux.keys.conf ~/.config/tmux/tmux.keys.conf
 
 if [ $? == 0 ]
 then
