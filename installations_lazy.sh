@@ -48,7 +48,7 @@ cp ubuntu_files/tmux.keys.conf ~/.config/tmux/tmux.keys.conf
 
 if [ $? == 0 ]
 then
-  echo "nano, tmux, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"
+  echo "nano, tmux, fzf, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"
   echo "tmux sessionX with all its dependencies including tmux plugin manager, fzf, and bat installed"
   echo "subshell successfully warpified"
   echo "date and time now included in history"
