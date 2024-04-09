@@ -23,7 +23,7 @@ echo "alias gc='git commit -m '" >> ~/.bashrc
 echo "alias gp='git push'" >> ~/.bashrc
 echo "alias gs='git status'" >> ~/.bashrc
 
-source .bashrc
+#source .bashrc
 
 #echo "Hurray!!! Subshell successfully warpified"
 
@@ -58,3 +58,5 @@ else
 fi
 
 echo "Installations completed successfully..."
+
+source .bashrc
