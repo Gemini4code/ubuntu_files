@@ -43,7 +43,7 @@ else
 fi
 
 mkdir ~/.config/tmux/
-cp ubuntu_files/tmux.con ~/.tmux.conf
+cp ubuntu_files/tmux.conf ~/.tmux.conf
 cp ubuntu_files/tmux.keys.conf ~/.config/tmux/tmux.keys.conf
 
 if [ $? == 0 ]
