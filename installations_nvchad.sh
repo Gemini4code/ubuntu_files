@@ -41,22 +41,26 @@ else
 	mkdir $HOME/.config && git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
 fi
 
-mkdir ~/.config/tmux/ && cp ubuntu_files/tmux.conf ~/.tmux.conf && cp ubuntu_files/tmux.keys.conf ~/.config/tmux/tmux.keys.conf
-
 if [ $? == 0 ]
 then
   echo "nano, fzf, tmux, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"
-  echo "tmux sessionX with all its dependencies including tmux plugin manager, fzf, and bat installed"
   echo "subshell successfully warpified"
   echo "nanorc copied to home directory. You can now configure nano editor..."
   echo "date and time now included in history"
   echo "lsd, stop, and git aliases added to .bashrc"
-	echo "Neovim successfully installed" 
+  echo "Neovim successfully installed"
   echo "Nvchad with all default configurations including lazy.nvim, numerous plugins and LSPs installed..."
 else
-	echo "Error occured when installing Neovim and lazy.nvim"
+  echo "Error occured when installing Neovim and lazy.nvim"
 fi
 
-echo "Installations completed successfully..."
+mkdir ~/.config/tmux/ && cp ubuntu_files/tmux.conf ~/.tmux.conf && cp ubuntu_files/tmux.keys.conf ~/.config/tmux/tmux.keys.conf
+
+if [ $? == 0 ]
+then
+  echo "tmux sessionX with all its dependencies including tmux plugin manager, fzf, and bat installed"
+else
+	echo "Error configuring tmux!"
+fi
 
 source .bashrc
