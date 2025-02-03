@@ -39,6 +39,25 @@ local plugins = {
     "csexton/trailertrash.vim",
     event = { "BufWritePre" },
     lazy = false
-  }
-}
+    --config = function()
+    -- Autoformat file buffer on save
+    -- autocmd BufWritePre * :TrailerTrim
+    --end
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "gopls",
+      },
+    },
+  },
+  {
+    "neovim/nvim-lsp-config",
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
+    end,
+  },
+ }
 return plugins

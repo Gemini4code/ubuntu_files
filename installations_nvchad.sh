@@ -41,6 +41,15 @@ else
 	mkdir $HOME/.config && git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
 fi
 
+cp ubuntu_files/plugins.lua .config/nvim/lua/custom/
+
+if [$? == 0]
+then
+  echo "Nvchad customs folder configured"
+else
+  echo "error setting up Nvchad customs folder"
+fi
+
 if [ $? == 0 ]
 then
   echo "nano, fzf, tmux, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, and npm successfully installed"
