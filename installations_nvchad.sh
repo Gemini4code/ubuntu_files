@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano fzf tmux bpytop htop lsd gdu nodejs entr unzip npm ripgrep neofetch -y
+sudo apt update && sudo apt install nano fzf tmux bpytop htop lsd gdu entr unzip npm ripgrep neofetch -y
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [ $? == 0 ]
 then
-	echo "nano, fzf, tmux, bpytop, lsd, gdu, git, entr, unzip, ripgrep, npm, and nodejs neofetch successfully installed..."
+	echo "nano, fzf, tmux, bpytop, lsd, gdu, git, entr, unzip, ripgrep, npm, and neofetch successfully installed..."
 else
 	echo "installation encountered an error. Please try again!"
 fi
