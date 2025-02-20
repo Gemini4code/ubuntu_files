@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano fzf tmux bpytop htop lsd gdu entr unzip npm ripgrep neofetch -y
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+sudo apt update && sudo apt install nano fzf tmux bpytop htop lsd gdu entr unzip npm ripgrep neofetch bat tldr bat -y
+#git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [ $? == 0 ]
 then
@@ -22,6 +22,8 @@ echo "alias ga='git add .'" >> ~/.bashrc
 echo "alias gc='git commit -m '" >> ~/.bashrc
 echo "alias gp='git push'" >> ~/.bashrc
 echo "alias gs='git status'" >> ~/.bashrc
+echo "alias btop='bpytop'" >> ~/.bashrc
+echo "alias bat='batcat'" >> ~/.bashrc
 
 #source .bashrc
 
@@ -63,13 +65,13 @@ else
   echo "Error occured when installing Neovim and lazy.nvim"
 fi
 
-mkdir ~/.config/tmux/ && cp ubuntu_files/tmux.conf ~/.tmux.conf && cp ubuntu_files/tmux.keys.conf ~/.config/tmux/tmux.keys.conf
+#mkdir ~/.config/tmux/ && cp ubuntu_files/tmux.conf ~/.tmux.conf && cp ubuntu_files/tmux.keys.conf ~/.config/tmux/tmux.keys.conf
 
-if [ $? == 0 ]
-then
-  echo "tmux sessionX with all its dependencies including tmux plugin manager, fzf, and bat installed"
-else
-	echo "Error configuring tmux!"
-fi
+#if [ $? == 0 ]
+#then
+#  echo "tmux sessionX with all its dependencies including tmux plugin manager, fzf, and bat installed"
+#else
+#	echo "Error configuring tmux!"
+#fi
 
 source .bashrc
