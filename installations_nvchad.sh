@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano fzf tmux bpytop htop lsd gdu entr unzip npm ripgrep neofetch bat tldr bat -y
+sudo apt update && sudo apt install nano fzf tmux bpytop htop lsd gdu entr unzip npm ripgrep neofetch bat tldr -y
 #git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [ $? == 0 ]
