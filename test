@@ -1,0 +1,16 @@
+#!/bin/bash
+
+pid=$(ps aux | grep "[T]ransmission" | awk '{print $2}')
+
+if [ -n "$pid" ]; then
+    kill -9 "$pid"
+else
+    echo "No Transmission process found."
+    exit 1
+fi
+
+if [ $? -eq 0 ]; then
+  echo "Transmission (PID: $pid) has been terminated."
+else
+  echo "Failed to kill Transmission."
+fi
