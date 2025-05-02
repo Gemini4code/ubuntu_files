@@ -25,7 +25,9 @@ echo "alias gs='git status'" >> ~/.bashrc
 echo "alias btop='bpytop'" >> ~/.bashrc
 echo "alias cat='bat'" >> ~/.bashrc
 
-echo -e '\n#Auto-Warpify\nprintf '\''\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash"}}\x9c'' ' >> ~/.bashrc
+echo "printf '\\eP\$f{\"hook\": \"SourcedRcFileForWarp\", \"value\": { \"shell\": \"bash\"}}\\x9c'" >> ~/.bashrc
+
+
 #source .bashrc
 if [ $? == 0 ]
 then
