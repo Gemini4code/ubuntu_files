@@ -83,4 +83,4 @@ fi
 #	echo "Error configuring tmux!"
 #fi
 
-source .bashrc
+#source .bashrc
