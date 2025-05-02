@@ -12,7 +12,7 @@ else
 fi
 
 #Warpify subshell
-echo "printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash"}}\x9c'" >> ~/.bashrc
+#echo "printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash"}}\x9c'" >> ~/.bashrc
 
 #Include date and time to bash history
 echo "export HISTTIMEFORMAT='[%F %T] '" >> ~/.bashrc
@@ -23,9 +23,15 @@ echo "alias gc='git commit -m '" >> ~/.bashrc
 echo "alias gp='git push'" >> ~/.bashrc
 echo "alias gs='git status'" >> ~/.bashrc
 echo "alias btop='bpytop'" >> ~/.bashrc
-echo "alias bat='batcat'" >> ~/.bashrc
+echo "alias cat='bat'" >> ~/.bashrc
 
+echo -e '\n#Auto-Warpify\nprintf '\''\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash"}}\x9c'' ' >> ~/.bashrc
 #source .bashrc
+if [$? = 0]
+then
+  echo "SUBSHELL SUCCESSFULLY WARPIFIED!!!!!!!!!"
+else
+  echo "WARPIFICATION FAILED, PLEASE MANUALLY WARPIFY.........."
 
 #echo "Hurray!!! Subshell successfully warpified"
 
@@ -34,7 +40,7 @@ cp /usr/share/doc/nano/examples/sample.nanorc $HOME/.nanorc
 #echo "nanorc copied to home directory. You can now configure nano editor..."
 
 #Install nvim and copy its config file to $HOME/.config/nvim/
-sudo cp ubuntu_files/nvim-linux-x86_64.tar.gz /usr/bin && cd /usr/bin && sudo tar xzvf nvim-linux-x86_64.tar.gz && sudo rm nvim-linux-x86_64.tar.gz && sudo ln -s ./nvim-linux-x86_64/bin/nvim ./nvim
+sudo cp ubuntu_files/nvim-linux-arm64.tar.gz /usr/bin && cd /usr/bin && sudo tar xzvf nvim-linux-arm64.tar.gz && sudo rm nvim-linux-arm64.tar.gz && sudo ln -s ./nvim-linux-x86_64/bin/nvim ./nvim
 
 #sudo apt install neovim -y
 
@@ -57,7 +63,7 @@ fi
 if [ $? == 0 ]
 then
   echo "nano, fzf, tmux, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, neofetch and npm successfully installed"
-  echo "subshell successfully warpified"
+  #echo "subshell successfully warpified"
   echo "nanorc copied to home directory. You can now configure nano editor..."
   echo "date and time now included in history"
   echo "lsd, stop, and git aliases added to .bashrc"
