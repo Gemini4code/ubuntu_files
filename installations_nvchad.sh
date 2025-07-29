@@ -1,15 +1,15 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install nano fzf tmux bpytop htop lsd gdu entr neofetch bat tldr -y
+sudo apt update && sudo apt install fzf tmux bpytop htop lsd gdu entr neofetch bat tldr -y
 #git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-if [ $? == 0 ]
-then
-	echo "nano, fzf, tmux, bpytop, lsd, gdu, git, entr, unzip, ripgrep, and neofetch successfully installed..."
-else
-	echo "installation encountered an error. Please try again!"
-fi
+#if [ $? == 0 ]
+#then
+#	echo "fzf, tmux, bpytop, lsd, gdu, git, entr, unzip, ripgrep, and neofetch successfully installed..."
+#else
+#	echo "installation encountered an error. Please try again!"
+#fi
 
 #Warpify subshell
 #echo "printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash"}}\x9c'" >> ~/.bashrc
@@ -25,21 +25,21 @@ echo "alias gs='git status'" >> ~/.bashrc
 echo "alias btop='bpytop'" >> ~/.bashrc
 echo "alias cat='bat'" >> ~/.bashrc
 
-echo "printf '\\eP\$f{\"hook\": \"SourcedRcFileForWarp\", \"value\": { \"shell\": \"bash\"}}\\x9c'" >> ~/.bashrc
+#echo "printf '\\eP\$f{\"hook\": \"SourcedRcFileForWarp\", \"value\": { \"shell\": \"bash\"}}\\x9c'" >> ~/.bashrc
 
 
 #source .bashrc
-if [ $? == 0 ]
-then
-  echo "SUBSHELL SUCCESSFULLY WARPIFIED!!!!!!!!!"
-else
-  echo "WARPIFICATION FAILED, PLEASE MANUALLY WARPIFY.........."
-fi
+#if [ $? == 0 ]
+#then
+#  echo "SUBSHELL SUCCESSFULLY WARPIFIED!!!!!!!!!"
+#else
+#  echo "WARPIFICATION FAILED, PLEASE MANUALLY WARPIFY.........."
+#fi
 
 #echo "Hurray!!! Subshell successfully warpified"
 
 #Create a nanorc file to configure nano editor
-cp /usr/share/doc/nano/examples/sample.nanorc $HOME/.nanorc
+#cp /usr/share/doc/nano/examples/sample.nanorc $HOME/.nanorc
 #echo "nanorc copied to home directory. You can now configure nano editor..."
 
 #Install nvim and copy its config file to $HOME/.config/nvim/
@@ -65,13 +65,13 @@ fi
 
 if [ $? == 0 ]
 then
-  echo "nano, fzf, tmux, bpytop, htop, lsd, gdu, entr, unzip, nodejs, ripgrep, neofetch and npm successfully installed"
+  echo "fzf, tmux, bpytop, htop, lsd, gdu, entr, unzip, ripgrep, neofetch successfully installed"
   #echo "subshell successfully warpified"
-  echo "nanorc copied to home directory. You can now configure nano editor..."
+  #echo "nanorc copied to home directory. You can now configure nano editor..."
   echo "date and time now included in history"
   echo "lsd, stop, and git aliases added to .bashrc"
   echo "Neovim successfully installed"
-  echo "Nvchad with all default configurations including lazy.nvim, numerous plugins and LSPs installed..."
+  #echo "Nvchad with all default configurations including lazy.nvim, numerous plugins and LSPs installed..."
 else
   echo "Error occured when installing Neovim and lazy.nvim"
 fi
