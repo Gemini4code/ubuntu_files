@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Installing various softwares
-sudo apt update && sudo apt install fzf tmux bpytop htop lsd gdu entr neofetch bat tldr -y
+sudo apt update && sudo apt install fzf tmux bpytop lsd gdu entr neofetch bat tldr -y
 #git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 #if [ $? == 0 ]
@@ -65,7 +65,7 @@ fi
 
 if [ $? == 0 ]
 then
-  echo "fzf, tmux, bpytop, htop, lsd, gdu, entr, unzip, ripgrep, neofetch successfully installed"
+  echo "fzf, tmux, bpytop, lsd, gdu, entr, unzip, ripgrep, neofetch successfully installed"
   #echo "subshell successfully warpified"
   #echo "nanorc copied to home directory. You can now configure nano editor..."
   echo "date and time now included in history"
