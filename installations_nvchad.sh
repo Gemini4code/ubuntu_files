@@ -24,6 +24,7 @@ echo "alias gp='git push'" >> ~/.bashrc
 echo "alias gs='git status'" >> ~/.bashrc
 echo "alias btop='bpytop'" >> ~/.bashrc
 echo "alias cat='bat'" >> ~/.bashrc
+echo "alias fzf='fzf --preview "bat --style=numbers --color=always {}"'" >> ~/.bashrc
 
 #echo "printf '\\eP\$f{\"hook\": \"SourcedRcFileForWarp\", \"value\": { \"shell\": \"bash\"}}\\x9c'" >> ~/.bashrc
 
